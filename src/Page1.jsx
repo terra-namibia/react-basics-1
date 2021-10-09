@@ -4,9 +4,9 @@ export const Page1 = () => {
   return (
     <div>
       <h1>Page1です</h1>
-      <Link to="./page1/datailA">DetailA</Link>
+      <Link to="./page1/detailA">DetailA</Link>
       <br />
-      <Link to="./page1/datailB">DetailB</Link>
+      <Link to="./page1/detailB">DetailB</Link>
     </div>
   );
 };

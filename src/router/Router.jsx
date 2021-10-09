@@ -1,9 +1,7 @@
 import { Switch, Route } from "react-router-dom";
 import { Home } from "../Home";
-import { Page1 } from "../Page1";
-import { Page1DetailA } from "../Page1DetailA";
-import { Page1DetailB } from "../Page1DetailB";
 import { Page2 } from "../Page2";
+import { page1Routes } from "./Page1Routes";
 
 export const Router = () => {
   return (
@@ -15,15 +13,15 @@ export const Router = () => {
         path="/page1"
         render={({ match: { url } }) => (
           <Switch>
-            <Route exact path={url}>
-              <Page1 />
-            </Route>
-            <Route exact path={`${url}/datailA`}>
-              <Page1DetailA />
-            </Route>
-            <Route exact path={`${url}/datailB`}>
-              <Page1DetailB />
-            </Route>
+            {page1Routes.map((route) => (
+              <Route
+                key={route.path}
+                exact={route.exact}
+                path={`${url}${route.path}`}
+              >
+                {route.children}
+              </Route>
+            ))}
           </Switch>
         )}
       />
