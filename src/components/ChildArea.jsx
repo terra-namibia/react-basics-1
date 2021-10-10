@@ -18,8 +18,8 @@ export const ChildArea = memo((props) => {
     <>
       {open ? (
         <div style={style}>
-          <p>{childAreaMessage}</p>
           <button onClick={onClickClose}>閉じる</button>
+          <p>{childAreaMessage}</p>
         </div>
       ) : null}
     </>
