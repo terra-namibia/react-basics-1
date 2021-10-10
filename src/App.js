@@ -31,7 +31,7 @@ const App = () => {
 
   const onClickClose = useCallback(() => setOpen(false), []);
 
-  const childAreaMessage = useMemo(() => console.log("aaaaaa"), []);
+  const childAreaMessage = useMemo(() => "aaaaaa", []);
 
   useEffect(() => {
     console.log("useEffect実行");
